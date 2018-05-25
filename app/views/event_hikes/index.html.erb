@@ -1,0 +1,13 @@
+<h1>Hello these are all planned Event Hikes</h1>
+
+<ul>
+  <% @event_hikes.each do |id, event| %>
+    <li><%= event[:event_mountain] %>
+      On: <%= event[:event_date] %>
+      Leaving At: <%= event[:event_leave_time] %>
+      Location Point: <%= event[:location_point] %>
+      Planner: <%= event[:planner] %>
+    </li>
+  <% end %>
+</ul>
+
