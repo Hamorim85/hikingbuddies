@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_mountain: MyString
+  event_date: 2018-05-25
+  event_leave_time: 2018-05-25 13:56:46
+  location_point: MyString
+  planner: MyString
+
+two:
+  event_mountain: MyString
+  event_date: 2018-05-25
+  event_leave_time: 2018-05-25 13:56:46
+  location_point: MyString
+  planner: MyString
