@@ -1,0 +1,11 @@
+<h1>Hello these are all planned Event Hikes</h1>
+
+<% @events.each do |event| %>
+  <h2><%= event.event_mountain %></h2>
+    <p>Hike On: <%= event.event_date.strftime('%a %d %b %Y')%></p>
+    <p>Leaving At: <%= event.event_leave_time.strftime("%k:%M")%></p>
+    <p>Location Point: <%= event.location_point %></p>
+    <p>Planner: <%= event.planner %></p>
+    <p>Description: <%= event.description %><p/>
+<% end %>
+
