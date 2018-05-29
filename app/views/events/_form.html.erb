@@ -1,0 +1,21 @@
+<%= form_for @event do |f| %>
+  <%= f.label :event_mountain, "Enter Moutain Name" %>
+  <%= f.text_field :event_mountain %>
+
+  <%= f.label :event_date, "Enter Date" %>
+  <%= f.date_field :event_date %>
+
+  <%= f.label :location_point, "Location Point" %>
+  <%= f.text_field :location_point %>
+
+  <%= f.label :event_leave_time, "Enter Leave Time" %>
+  <%= f.time_field :event_leave_time %>
+
+  <%= f.label :planner, "Planner name" %>
+  <%= f.text_field :planner %>
+
+  <%= f.label :description, "Description" %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
