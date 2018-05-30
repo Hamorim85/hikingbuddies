@@ -1,10 +1,18 @@
-<h1>Hello these are all planned Event Hikes</h1>
-
-<% @events.each do |event| %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Hello these are all planned Event Hikes</h1>
+    </div>
+  </div>
+  <div class="row">
+  <% @events.each do |event| %>
+  <div class="col-xs-12 col-sm-4">
   <h2><%= event.event_mountain %></h2>
     <p>Hike On: <%= event.event_date.strftime('%a %d %b %Y')%></p>
     <p>Leaving At: <%= event.event_leave_time.strftime("%k:%M")%></p>
-    <%= link_to "More Details", event_path(event) %>
-    <%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure?" } %>
-<% end %>
-
+    <%= link_to "More Details", event_path(event), class:"btn btn-success" %>
+    <%= link_to "Delete", event_path(event), method: :delete, class:"btn btn-danger", data: { confirm: "Are you sure?" } %>
+    </div>
+  <% end %>
+ </div>
+</div>

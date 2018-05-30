@@ -1,7 +1,14 @@
-  <h2><%= @event.event_mountain %></h2>
-  <p>Hike On: <%= @event.event_date.strftime('%a %d %b %Y')%></p>
-  <p>Leaving At: <%= @event.event_leave_time.strftime("%k:%M")%></p>
-  <p>Location Point: <%= @event.location_point %></p>
-  <p>Planner: <%= @event.planner %></p>
-  <p>Description: <%= @event.description %><p/>
-  <%= link_to "Back to all events", events_path %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2><%= @event.event_mountain %></h2>
+      <p>Hike On: <%= @event.event_date.strftime('%a %d %b %Y')%></p>
+      <p>Leaving At: <%= @event.event_leave_time.strftime("%k:%M")%></p>
+      <p>Location Point: <%= @event.location_point %></p>
+      <p>Planner: <%= @event.planner %></p>
+      <p>Description: <%= @event.description %><p/>
+      <%= link_to "Edit", edit_event_path(@event), class:"btn btn-primary" %>
+      <%= link_to "Back to all events", events_path, class:"btn btn-secondary" %>
+    </div>
+  </div>
+</div>

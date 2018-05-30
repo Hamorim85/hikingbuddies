@@ -1,21 +1,9 @@
-<%= form_for @event do |f| %>
-  <%= f.label :event_mountain, "Enter Moutain Name" %>
-  <%= f.text_field :event_mountain %>
-
-  <%= f.label :event_date, "Enter Date" %>
-  <%= f.date_field :event_date %>
-
-  <%= f.label :location_point, "Location Point" %>
-  <%= f.text_field :location_point %>
-
-  <%= f.label :event_leave_time, "Enter Leave Time" %>
-  <%= f.time_field :event_leave_time %>
-
-  <%= f.label :planner, "Planner name" %>
-  <%= f.text_field :planner %>
-
-  <%= f.label :description, "Description" %>
-  <%= f.text_field :description %>
-
-  <%= f.submit %>
+<%= simple_form_for @event do |f| %>
+  <%= f.input :event_mountain, label:"Enter Moutain Name" %>
+  <%= f.input :event_date, label:"Enter Date" %>
+  <%= f.input :location_point, label: "Location Point" %>
+  <%= f.input :event_leave_time, label: "Enter Leave Time" %>
+  <%= f.input :planner,  label:"Planner name" %>
+  <%= f.input :description, label: "Description" %>
+  <%= f.button :submit, class:"btn btn-success" %>
 <% end %>

@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180525211942) do
+ActiveRecord::Schema.define(version: 20180530030746) do
 
-  create_table "event_hikes", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_comments_on_event_id"
+  end
+
+  create_table "events", force: :cascade do |t|
     t.string "event_mountain"
     t.date "event_date"
     t.time "event_leave_time"

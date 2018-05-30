@@ -32,10 +32,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.1.1'
 gem 'simple_form'
 gem 'by_star'
 gem 'chronic'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 
 group :development, :test do
