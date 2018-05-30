@@ -1,0 +1,9 @@
+<h1>These are the upcoming hikes</h1>
+
+<% @upcoming_events.each do |event| %>
+  <h2><%= event.event_mountain %></h2>
+    <p>Hike On: <%= event.event_date.strftime('%a %d %b %Y')%></p>
+    <p>Leaving At: <%= event.event_leave_time.strftime("%k:%M")%></p>
+    <%= link_to "More Details", event_path(event) %>
+    <%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>

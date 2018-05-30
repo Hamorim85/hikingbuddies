@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   resources :events do
     collection do
-      get "upcomming", to: 'events#upcoming'
+      get "upcoming", to: 'events#upcoming'
     end
+    member do
+      get "planner", to: 'events#planner'
+    end
+
   end
 
 

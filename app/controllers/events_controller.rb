@@ -1,5 +1,13 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:planner ,:show, :edit, :update, :destroy]
+
+  def planner
+     @planner_name = @event.planner
+  end
+
+  def upcoming
+    @upcoming_events = Event.where("event_date >= ?", Time.current)
+  end
 
   def index
     @events = Event.all
