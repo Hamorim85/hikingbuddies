@@ -1,10 +1,20 @@
 <%= simple_form_for @event do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :event_mountain, label:"Enter Moutain Name" %>
-  <%= f.input :event_date, label:"Enter Date" %>
-  <%= f.input :location_point, label: "Location Point" %>
-  <%= f.input :event_leave_time, label: "Enter Leave Time" %>
-  <%= f.input :planner,  label:"Planner name" %>
-  <%= f.input :description, label: "Description" %>
-  <%= f.button :submit, class:"btn btn-success" %>
+  <% if @event.errors.any? %>
+    <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="form-inputs">
+    <%= f.input :event_mountain, label:"Enter Moutain Name" %>
+    <%= f.input :event_date, label:"Enter Date" %>
+    <%= f.input :location_point, label: "Location Point" %>
+    <%= f.input :event_leave_time, label: "Enter Leave Time" %>
+    <%= f.input :planner,  label:"Planner name" %>
+    <%= f.input :description, label: "Description" %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-success" %>
+  </div>
 <% end %>
