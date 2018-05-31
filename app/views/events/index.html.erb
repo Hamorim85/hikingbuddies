@@ -5,14 +5,20 @@
     </div>
   </div>
   <div class="row">
-  <% @events.each do |event| %>
-  <div class="col-xs-12 col-sm-4">
-  <h2><%= event.event_mountain %></h2>
-    <p>Hike On: <%= event.event_date.strftime('%a %d %b %Y')%></p>
-    <p>Leaving At: <%= event.event_leave_time.strftime("%k:%M")%></p>
-    <%= link_to "More Details", event_path(event), class:"btn btn-success" %>
-    <%= link_to "Delete", event_path(event), method: :delete, class:"btn btn-danger", data: { confirm: "Are you sure?" } %>
+    <% @events.each do |event| %>
+    <div class="col-xs-12 col-sm-4">
+      <h2><%= event.event_mountain %></h2>
+      <p>Hike On: <%= event.event_date.strftime('%a %d %b %Y')%></p>
+      <p>Leaving At: <%= event.event_leave_time.strftime("%k:%M")%></p>
+      <%= link_to "More Details", event_path(event), class:"btn btn-success" %>
+      <%= link_to "Delete", event_path(event), method: :delete, class:"btn btn-danger", data: { confirm: "Are you sure?" } %>
     </div>
-  <% end %>
- </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+       <%= link_to "Add Event", new_event_path, class:"btn btn-success" %>
+    </div>
+  </div>
+
 </div>
